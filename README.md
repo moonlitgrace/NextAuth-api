@@ -29,4 +29,5 @@ That's all, you can modify this backend and feel free make a pull request
 ## Deployed on Render
 
 This backend is deployed on render, yeah it's live ! <br />
-[https://nextauth-backend.onrender.com](https://nextauth-backend.onrender.com)
+[https://nextauth-backend.onrender.com](https://nextauth-backend.onrender.com) <br />
+It feels slow, because it was on free plan !
