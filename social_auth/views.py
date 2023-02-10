@@ -13,4 +13,4 @@ class GithubLogin(SocialLoginView):
     authentication_classes = []
     adapter_class = GitHubOAuth2Adapter
     client_class = OAuth2Client
-    callback_url = 'http://localhost:3000/login/'
+    callback_url = 'https://nextauth-dj.vercel.app/'
