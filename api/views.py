@@ -5,9 +5,11 @@ import requests
 
 from .serializers import UserSerializer
 
-from accounts.models import CustomUser
+from accounts.models import CustomUser, Feedback
 
 # getting api routes exists
+
+
 class getRoutes(APIView):
     def get(self, request):
         routes = [
@@ -16,6 +18,8 @@ class getRoutes(APIView):
         return Response(routes)
 
 # creating users
+
+
 class SignupView(APIView):
     def post(self, request):
         data = request.data
@@ -41,6 +45,8 @@ class SignupView(APIView):
         }, status=status.HTTP_400_BAD_REQUEST)
 
 # fetching all user details
+
+
 class AllUsers(generics.ListAPIView):
     # everyone can access
     permission_classes = [permissions.AllowAny]
@@ -49,6 +55,8 @@ class AllUsers(generics.ListAPIView):
     serializer_class = UserSerializer
 
 # fetching current user loggedin
+
+
 class CurrentUser(APIView):
     # only Authenticated users can access
     permission_classes = [permissions.IsAuthenticated]
@@ -59,6 +67,8 @@ class CurrentUser(APIView):
         return Response(serializer.data)
 
 # change user password
+
+
 class changePasswordView(APIView):
     def post(self, request):
         user = request.user
@@ -67,3 +77,20 @@ class changePasswordView(APIView):
         new_password = data['new_password']
 
         return Response(current_password, new_password)
+
+
+# new feedback from users
+class NewFeedback(APIView):
+    def post(self, request):
+        try:
+            user = request.user
+            data = request.data
+
+            feedback = Feedback.objects.create(
+                user=user,
+                body=data['body']
+            )
+
+            return Response(status=status.HTTP_201_CREATED)
+        except:
+            return Response(status=status.HTTP_401_UNAUTHORIZED)

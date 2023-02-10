@@ -7,4 +7,7 @@ urlpatterns = [
     path('all/', views.AllUsers.as_view()),
     path('current-user/', views.CurrentUser.as_view()),
     path('change-password/', views.changePasswordView.as_view()),
+
+    # feedback
+    path('new-feedback/', views.NewFeedback.as_view(), name='new-feedback'),
 ]
