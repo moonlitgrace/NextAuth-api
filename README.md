@@ -14,11 +14,15 @@ Clone this repo and `cd <repo name>/` <br />
 First, install the required packages( recommended in virtual env ):
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Then start development server by:
 ```bash
 python manage.py runserver
+# or
+python3 manage.py runserver
+# or
+./manage.py runserver
 ```
 Server will be run in `http://localhost:8000`
 
