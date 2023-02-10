@@ -7,7 +7,9 @@ It has Google and Github social authentication too... And it comes with awesome 
 [dj-rest-auth](https://github.com/iMerica/dj-rest-auth) - for Simple JWT authentication with httpOnly cookies <br />
 [django-allauth](https://github.com/pennersr/django-allauth) - for social authentication <br />
 [djangorestframework](https://github.com/encode/django-rest-framework) - for making Rest Api's <br />
-[djangorestframework-simplejwt](https://github.com/jazzband/djangorestframework-simplejwt) - for making JWT token based authentication <br /> <br />
+[djangorestframework-simplejwt](https://github.com/jazzband/djangorestframework-simplejwt) - for making JWT token based authentication <br />
+
+> Checkout the frontend for this [NextAuth-frontend](https://github.com/suneethsunx/NextAuth-frontend)
 
 ## Getting Started
 Clone this repo and `cd <repo name>/` <br />
@@ -34,4 +36,4 @@ That's all, you can modify this backend and feel free make a pull request
 
 This backend is deployed on render, yeah it's live ! <br />
 [https://nextauth-backend.onrender.com](https://nextauth-backend.onrender.com) <br />
-It feels slow, because it was on free plan !
+> It feels slow, because it was on free plan !
