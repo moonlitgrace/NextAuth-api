@@ -22,7 +22,7 @@ python manage.py runserver
 ```
 Server will be run in `http://localhost:8000`
 
-Open [http://localhost:8000](http://localhost:8000) with your browser to see the result.
+Open [http://localhost:8000](http://localhost:8000) with your browser to see the result. <br />
 That's all, you can modify this backend and feel free make a pull request
 
 
